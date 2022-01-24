@@ -16,6 +16,14 @@ As a booker I only want to see available spaces.
 
 Bookers are able to view spaces until a booking is confirmed by the owner.
 
+## Domain Models
+
+![domain-model-adding-spaces](domain-model-adding-spaces.png)
+![domain-model-viewing-spaces](domain-model-viewing-spaces.png)
+![domain-model-request-stay](domain-model-request-stay.png)
+
+## Set up
+
 
 To setup the database:
 
