@@ -15,6 +15,6 @@ group :test, :development do
   gem 'simplecov', require: false 
   gem 'simplecov-console', require: false
   gem 'webrick'
-
+  gem 'launchy'
 end 
 
