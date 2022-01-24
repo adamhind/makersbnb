@@ -16,6 +16,8 @@ SimpleCov.start
 
 ENV['RACK_ENV'] = 'test'
 
+ENV['ENVIRONMENT'] = 'test'
+
 Capybara.app = Makersbnb
 
 RSpec.configure do |config|
