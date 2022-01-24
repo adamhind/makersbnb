@@ -15,3 +15,19 @@ As an owner I want to be able to confirm bookings for my space.
 As a booker I only want to see available spaces.
 
 Bookers are able to view spaces until a booking is confirmed by the owner.
+
+
+To setup the database:
+
+* Connect to psql
+* Create the database using the psql command `CREATE DATABASE ducks_bnb;`
+* Connect to the database using the psql command `\c ducks_bnb`;
+* create a table using the create spaces table db file. 
+
+
+To setup the test database:
+
+* Connect to psql
+* Create the database using the psql command `CREATE DATABASE ducks_bnb_test;`
+* Connect to the database using the psql command `\c ducks_bnb_test`;
+* create a table using the create spaces table db file. 
