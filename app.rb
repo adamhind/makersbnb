@@ -17,7 +17,6 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/index'
   end
 
-
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -33,9 +32,4 @@ class Makersbnb < Sinatra::Base
   end 
 
   run! if app_file == $0
-
-end 
-
-  # run! if app_file == $0
 end
-
