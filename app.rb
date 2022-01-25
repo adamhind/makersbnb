@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+
 require_relative 'lib/space' 
 
 class Makersbnb < Sinatra::Base
@@ -11,12 +12,13 @@ class Makersbnb < Sinatra::Base
     'hello world'
   end
 
-  get '/spaces/new' do
-    erb :'spaces/new'
+  get '/spaces' do
+    @spaces = Space.all
+    erb :'spaces/index'
   end
 
-  get '/spaces' do
-    erb :'spaces/index'
+  get '/spaces/new' do
+    erb :'spaces/new'
   end
 
   post '/spaces' do
