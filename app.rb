@@ -17,6 +17,7 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/index'
   end
 
+
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -25,6 +26,11 @@ class Makersbnb < Sinatra::Base
     Space.add(name: params[:name], description: params[:description], price: params[:price])
     redirect('/spaces')
   end
+
+  post '/spaces/request' do 
+    @name = params[:name]
+    erb :'spaces/requested'
+  end 
 
   run! if app_file == $0
 

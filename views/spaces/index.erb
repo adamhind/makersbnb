@@ -4,6 +4,11 @@
       <%= space.name %>
       <%= space.description %>
       <%= space.price %>
+
+      <form action = '/spaces/request' method = 'POST'>
+        <input type = 'hidden' name = 'name' value = '<%=space.name%>'>
+        <input type = 'submit' value = 'Request <%=space.name%>'>
+        </form>
     </li>
   <% end %>
 </ul>
