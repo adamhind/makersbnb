@@ -1,14 +1,14 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 
-require_relative 'lib/space' 
+require_relative 'lib/space'
 
 class Makersbnb < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  
-  get '/' do 
+
+  get '/' do
     'hello world'
   end
 
@@ -26,6 +26,5 @@ class Makersbnb < Sinatra::Base
     redirect('/spaces')
   end
 
-  run! if app_file == $0
-
-end 
+  # run! if app_file == $0
+end

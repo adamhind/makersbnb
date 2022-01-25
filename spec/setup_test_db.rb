@@ -2,7 +2,7 @@ require 'pg'
 
 def setup_test_database
   connection = PG.connect(dbname: 'ducks_bnb_test')
-  connection.exec("TRUNCATE spaces;")
+  connection.exec('TRUNCATE spaces;')
 end
 
 def add_row_to_test_database

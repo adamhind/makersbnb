@@ -1,21 +1,21 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
 
 ruby '3.1.0'
 
-group :test do 
-  gem 'rspec'
+group :test do
   gem 'capybara'
+  gem 'rspec'
+end
 
-end 
-
-group :test, :development do 
+group :test, :development do
+  gem 'launchy'
+  gem 'pg'
+  gem 'rubocop', '1.20'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
   gem 'sinatra'
   gem 'sinatra-contrib'
-  gem 'pg'
-  gem 'simplecov', require: false 
-  gem 'simplecov-console', require: false
   gem 'webrick'
-  gem 'launchy'
-  gem 'rubocop', '1.20'
-end 
-
+end
