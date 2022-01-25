@@ -12,7 +12,7 @@ end
 group :test, :development do
   gem 'launchy'
   gem 'pg'
-  gem 'rubocop', '1.20'
+  gem 'rubocop', '1.25'
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'sinatra'
