@@ -44,7 +44,7 @@ I want to be able to confirm bookings for my space.
 
 ```
 As a space owner
-So that I can 
+So that other users can request my spaces
 I would like my space to show as available until a booking is confirmed.
 ```
 
