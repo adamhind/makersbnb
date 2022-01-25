@@ -3,6 +3,7 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_db'
 
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
@@ -19,6 +20,19 @@ ENV['RACK_ENV'] = 'test'
 ENV['ENVIRONMENT'] = 'test'
 
 Capybara.app = Makersbnb
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+    add_row_to_test_database
+  end
+
+  config.after(:suite) do
+    puts
+    puts "\e[33mHave you considered running rubocop? It will help you improve your code!\e[0m"
+    puts "\e[33mTry it now! Just run: rubocop\e[0m"
+  end
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
