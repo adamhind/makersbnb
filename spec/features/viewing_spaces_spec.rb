@@ -1,5 +1,5 @@
-feature "allows bookers to view all spaces" do
-  scenario "user visits /spaces" do
+feature 'allows bookers to view all spaces' do
+  scenario 'user visits /spaces' do
     visit('/spaces')
     expect(page).to have_content('Test Space #1')
     expect(page).to have_content('Test Space #2')
