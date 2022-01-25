@@ -16,5 +16,6 @@ group :test, :development do
   gem 'simplecov-console', require: false
   gem 'webrick'
   gem 'launchy'
+  gem 'rubocop', '1.20'
 end 
 
