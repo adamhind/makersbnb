@@ -11,6 +11,7 @@
           1,
           1,
           1,
+          null,
           1,
           1,
           1,
@@ -29,8 +30,20 @@
           null,
           null
         ]
+      },
+      "/Users/mbodendo/projects/makersbnb/spec/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1643117021
+    "timestamp": 1643119553
   }
 }

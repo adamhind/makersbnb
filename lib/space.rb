@@ -10,7 +10,7 @@ class Space
     @price = price     
   end
 
-  def self.add
+  def self.add(name:, description:, price:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'ducks_bnb_test')
     else

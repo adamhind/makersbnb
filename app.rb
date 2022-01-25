@@ -16,7 +16,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/spaces' do
-    erb :spaces
+    erb :'spaces/index'
   end
 
   post '/spaces' do
