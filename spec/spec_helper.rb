@@ -25,6 +25,8 @@ RSpec.configure do |config|
   config.before(:each) do
     setup_test_database
     add_row_to_test_database
+    add_test_users_to_database
+    add_test_bookings_to_database
   end
 
   config.after(:suite) do
