@@ -81,6 +81,9 @@ To setup the test database:
 * Connect to the ducks_bnb_test database using the psql command `\c ducks_bnb_test;`
 * Set up the appropriate tables by running the SQL scripts in the `db/migrations` folder.
 
+![database_structure](datebasestructure.png)
+
+
 ### To run the DucksBnB app
 
 ```
