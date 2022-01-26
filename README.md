@@ -4,12 +4,12 @@
  ( ._> /
   `---'
 
-## User Stories 
+## User Stories
 
 ```
 As a person looking for a space
-So that I can choose from all spaces
-I only want to see available spaces.
+So that I can choose a space
+I want to be able to see all available spaces.
 ```
 
 ```
