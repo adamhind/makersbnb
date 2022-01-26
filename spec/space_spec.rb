@@ -2,7 +2,7 @@ require 'space'
 
 describe Space do
   describe '.all' do
-    it 'returns all spaces as an array of Space classes' do
+    it 'returns all available spaces as an array of Space classes' do
       spaces = Space.all
 
       expect(spaces).to be_an Array

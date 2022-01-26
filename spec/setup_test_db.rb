@@ -9,9 +9,12 @@ end
 
 def add_row_to_test_database
   connection = PG.connect(dbname: 'ducks_bnb_test')
-  connection.exec("INSERT INTO spaces (space_name, description, price) VALUES ('Test Space #1', 'This is the first test space. Spacious.', 50.00);")
-  connection.exec("INSERT INTO spaces (space_name, description, price) VALUES ('Test Space #2', 'This is the second test space. Cosy.', 40.00);")
-  connection.exec("INSERT INTO spaces (space_name, description, price) VALUES ('Test Space #3', 'This is the third test space. Cheap.', 20.00);")
+  connection.exec("INSERT INTO spaces (space_name, description, price, available_from, available_to) VALUES 
+  ('Test Space #1', 'This is the first test space. Spacious.', '50.00', '01/01/2022', '01/30/2022');")
+  connection.exec("INSERT INTO spaces (space_name, description, price, available_from, available_to) VALUES 
+  ('Test Space #2', 'This is the second test space. Cosy.', '40.00', '01/01/2022', '01/30/2022');")
+  connection.exec("INSERT INTO spaces (space_name, description, price, available_from, available_to) VALUES 
+  ('Test Space #3', 'This is the third test space. Cheap.', '20.00', '02/01/2022', '02/28/2022');")
 end
 
 def add_test_users_to_database
@@ -27,10 +30,10 @@ end
 def add_test_bookings_to_database
   connection = PG.connect(dbname: 'ducks_bnb_test')
   connection.exec("INSERT INTO bookings (date_from, date_to, confirmed) VALUES 
-  ('01/01/2022', '02/01/2022','false');")
+  ('01/01/2022', '01/02/2022','false');")
   connection.exec("INSERT INTO bookings (date_from, date_to, confirmed) VALUES 
-  ('10/01/2022', '11/01/2022','false');")
+  ('01/10/2022', '01/11/2022','false');")
   connection.exec("INSERT INTO bookings (date_from, date_to, confirmed) VALUES 
-  ('11/01/2022', '11/01/2022','true');")
+  ('01/01/2022', '01/02/2022','true');")
 end
   
