@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/adamhindmarsh/Desktop/projects/makersbnb/spec/features/adding_spaces_spec.rb": {
+      "/Users/jonathanyoung/Projects/MakersBootcamp/makersbnb/spec/features/adding_spaces_spec.rb": {
         "lines": [
           1,
           1,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/Users/adamhindmarsh/Desktop/projects/makersbnb/spec/features/request_a_space_spec.rb": {
+      "/Users/jonathanyoung/Projects/MakersBootcamp/makersbnb/spec/features/request_a_space_spec.rb": {
         "lines": [
           1,
           1,
@@ -28,7 +28,7 @@
           null
         ]
       },
-      "/Users/adamhindmarsh/Desktop/projects/makersbnb/spec/features/viewing_spaces_spec.rb": {
+      "/Users/jonathanyoung/Projects/MakersBootcamp/makersbnb/spec/features/viewing_spaces_spec.rb": {
         "lines": [
           1,
           1,
@@ -40,8 +40,26 @@
           null
         ]
       },
-      "/Users/adamhindmarsh/Desktop/projects/makersbnb/spec/features/visit_home_page_spec.rb": {
+      "/Users/jonathanyoung/Projects/MakersBootcamp/makersbnb/spec/features/visit_home_page_spec.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -50,7 +68,7 @@
           null
         ]
       },
-      "/Users/adamhindmarsh/Desktop/projects/makersbnb/spec/space_spec.rb": {
+      "/Users/jonathanyoung/Projects/MakersBootcamp/makersbnb/spec/space_spec.rb": {
         "lines": [
           1,
           null,
@@ -79,6 +97,6 @@
         ]
       }
     },
-    "timestamp": 1643205071
+
   }
 }
