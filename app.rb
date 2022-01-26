@@ -9,7 +9,11 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/' do
-    'hello world'
+    redirect '/home'
+  end
+
+  get '/home' do
+    erb :homepage
   end
 
   get '/spaces' do
