@@ -15,10 +15,12 @@ describe Space do
 
   describe '#add' do
     it 'adds a new space' do
-      space = Space.add(name: 'Beach house', description: 'A nice beach house', price: '99')
+      space = Space.add(name: 'Beach house', description: 'A nice beach house', price: '99', available_from: '01,01,2022', available_to: '01,30,2022',)
       expect(space.name).to eq 'Beach house'
       expect(space.description).to eq 'A nice beach house'
       expect(space.price).to eq '£99.00'
+      expect(space.available_from).to eq '2022-01-01'
+      expect(space.available_to).to eq '2022-01-30'
     end
   end
 end
