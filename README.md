@@ -58,6 +58,11 @@ I would like my space to show as available until a booking is confirmed.
 ### Requesting a stay
 ![domain-model-request-stay](domain-model-request-stay.png)
 
+### Being able to sign up or login
+![domain-model-sign-up](user_story_4_domain_model.png)
+
+### Only able to see available spaces
+![domain-model-sign-up](user_story_5_domain_model.png)
 
 ## How to use
 ### To set up the project
