@@ -68,7 +68,7 @@ class Space
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'
-    PG.connect(dbname: 'ducks_bnb_test')
+      PG.connect(dbname: 'ducks_bnb_test')
     else
       PG.connect(dbname: 'ducks_bnb')
     end
