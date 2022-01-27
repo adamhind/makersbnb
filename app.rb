@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 
 require_relative 'lib/space'
 require_relative 'lib/user'
+require_relative 'lib/mail'
 
 class Makersbnb < Sinatra::Base
   configure :development do
