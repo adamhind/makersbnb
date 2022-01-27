@@ -36,7 +36,7 @@ class Space
         "SELECT space_id, space_name, description, price, available_from, available_to
         FROM spaces
         WHERE available_from <= '#{checkin}'
-        AND available_to >= '#{checkin}';"
+        AND available_to >= '#{checkout}';"
         )
     end
     results.map do |space|
