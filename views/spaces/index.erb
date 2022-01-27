@@ -11,11 +11,12 @@
       <form action = '/spaces/request' method = 'POST'>
         <input type = 'hidden' name = 'name' value = '<%=space.name%>'>
         <input type = 'submit' value = 'Request <%=space.name%>'>
-        </form>
+      </form>
     </li>
   <% end %>
-  <form action = '/spaces/new' method = 'GET'>
+ </ul>
+
+ <form action = '/spaces/new' method = 'GET'>
   <input type='submit' value='Add a space'>
-  </form>
-</ul>
+ </form>
 </html>

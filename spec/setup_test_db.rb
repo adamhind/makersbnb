@@ -51,7 +51,6 @@ def add_spaces_to_test_database
   ('Test Space #3', 'This is the third test space. Cheap.', '20.00', '2', '2022-02-01', '2022-02-28');")
 end
 
-
 def add_bookings_to_test_database
   connection = PG.connect(dbname: 'ducks_bnb_test')
   connection.exec("INSERT INTO bookings (space_id, date_from, date_to, booker_id, confirmed) VALUES 
