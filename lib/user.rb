@@ -1,4 +1,6 @@
 require 'pg'
+require_relative 'mail'
+
 class User
 
   attr_reader :user_id, :first_name, :surname, :username, :email, :password
@@ -25,6 +27,8 @@ class User
       username: result[0]['username'],
       email: result[0]['email'],
       password: result[0]['password'])
+
+      Mail.new_user(first_name: first_name, email: email)
   end
 
   def self.connection
