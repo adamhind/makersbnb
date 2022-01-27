@@ -1,7 +1,8 @@
 require 'pg'
+require 'date'
 
 class Space
-  attr_reader :id, :name, :description, :price , :available_from, :available_to
+  attr_reader :id, :name, :description, :price, :available_from, :available_to
 
   def initialize(id:, name:, description:, price:, available_from:, available_to:)
     @id = id
@@ -12,8 +13,32 @@ class Space
     @available_to = available_to
   end
 
-  def self.all
-    results = connection.exec('SELECT * FROM spaces;')
+  def self.all(checkin: nil, checkout: nil)
+    if checkin.nil? && checkout.nil?
+      results = connection.exec(
+        'SELECT space_id, space_name, description, price, available_from, available_to 
+        FROM spaces;'
+      )
+    elsif checkin.nil? && checkout != nil 
+      results = connection.exec(
+        "SELECT space_id, space_name, description, price, available_from, available_to 
+        FROM spaces 
+        WHERE available_to >= '#{checkout}';"
+        )
+    elsif checkin != nil && checkout.nil?
+      results = connection.exec(
+        "SELECT space_id, space_name, description, price, available_from, available_to
+        FROM spaces 
+        WHERE available_from <= '#{checkin}';"
+        )
+    else
+      results = connection.exec(
+        "SELECT space_id, space_name, description, price, available_from, available_to
+        FROM spaces
+        WHERE available_from <= '#{checkin}'
+        AND available_to >= '#{checkin}';"
+        )
+    end
     results.map do |space|
       Space.new(
         id: space['space_id'],
@@ -43,7 +68,7 @@ class Space
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'
-      PG.connect(dbname: 'ducks_bnb_test')
+    PG.connect(dbname: 'ducks_bnb_test')
     else
       PG.connect(dbname: 'ducks_bnb')
     end

@@ -17,7 +17,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all
+    @spaces = Space.all(checkin: params[:'Check-in'], checkout: params[:'Check-out'])
     erb :'spaces/index'
   end
 
