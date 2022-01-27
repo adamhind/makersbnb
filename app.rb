@@ -35,10 +35,15 @@ class Makersbnb < Sinatra::Base
   get '/signup' do 
     erb :signup
   end 
-  post '/signup' do 
+
+  post '/home' do 
     User.add(first_name: params[:first_name], surname: params[:surname], username: params[:username], email: params[:email], password: params[:password])
     redirect('/home')
   end 
+
+  get '/home' do 
+  
+  end
 
   run! if app_file == $0
 end
