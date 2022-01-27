@@ -10,7 +10,11 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/' do
-    'hello world'
+    redirect '/home'
+  end
+
+  get '/home' do
+    erb :homepage
   end
 
   get '/spaces' do
@@ -23,7 +27,13 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.add(name: params[:name], description: params[:description], price: params[:price])
+    Space.add(
+      name: params[:name], 
+      description: params[:description], 
+      price: params[:price], 
+      available_from: params[:available_from], 
+      available_to: params[:available_to]
+      )
     redirect('/spaces')
   end
 
