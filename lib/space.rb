@@ -1,5 +1,4 @@
 require 'pg'
-require 'date'
 
 class Space
   attr_reader :id, :name, :description, :price, :available_from, :available_to
