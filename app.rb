@@ -14,7 +14,7 @@ class Makersbnb < Sinatra::Base
   enable :sessions
 
   get '/' do
-    redirect '/home'
+    erb :home
   end
 
   get '/home' do
@@ -75,7 +75,6 @@ class Makersbnb < Sinatra::Base
     username = params[:username]
     redirect('/home')
   end
-
 
   run! if app_file == $0
 end
