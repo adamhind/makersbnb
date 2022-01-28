@@ -12,4 +12,12 @@ describe Booking do
    end
   end
 
+
+  # describe '#confirm' do 
+  #   it 'changes the database to confirm => true when a request is confirmed' do 
+
+  #   end 
+  # end 
+
+
 end

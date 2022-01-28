@@ -1,6 +1,7 @@
 require 'user'
 
 describe User do 
+
   describe '.add' do 
     it 'adds a user' do 
       user = User.add(
@@ -23,4 +24,24 @@ describe User do
       expect(user).to eq 3
     end 
   end 
+
+  describe '#requests' do 
+    it 'shows a list of requests ready to be confirmed' do 
+      user = User.new(
+        user_id: '1', 
+        first_name: 'Test User 1', 
+        surname: 'Number 1', 
+        username: 'TEST01', 
+        email: 'test1@test.com', 
+        password: 'Password1'
+        )
+
+      expect(user.requests).to be_an Array
+      expect(user.requests[0]['space_id']).to eq "1"
+      expect(user.requests[0]['date_from']).to eq "2022-01-01"
+      expect(user.requests[0]['date_to']).to eq "2022-01-02"
+    end 
+  end 
+
 end 
+

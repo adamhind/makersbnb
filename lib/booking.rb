@@ -27,6 +27,17 @@ class Booking
     )
   end
 
+  # def self.get_bookings(space_id)
+  #   results = connection.exec("SELECT * from bookings WHERE space_id='#{space_id}")
+  #   results.map do |booking|
+  #     Booking.new(
+  #     booking_id: booking['booking_id'],
+  #     space_id: booking['space_id'],
+  #     date_from: booking['date_from'],
+  #     date_to: booking['date_to'],
+  #   )
+    
+  # end 
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'
@@ -35,5 +46,6 @@ class Booking
       PG.connect(dbname: 'ducks_bnb')
     end
   end
+
 
 end
