@@ -53,7 +53,7 @@ class User
     @my_bookings
   end 
   
-      
+ 
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'

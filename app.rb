@@ -49,8 +49,7 @@ class Makersbnb < Sinatra::Base
   post '/spaces/request' do 
     @name = params[:name]
     @space_id = params[:space_id]
-    # @booker_id = session[:user_id]
-    @booker_id = '1' # Place holder
+    @booker_id = session[:user_id]
     @date_from = session[:check_in]
     @date_to = session[:check_out]
     Booking.add(
