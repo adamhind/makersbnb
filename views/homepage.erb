@@ -1,11 +1,13 @@
-<h1> Welcome to DucksBnB </h1>
+<h1> Welcome to DucksBnB</h1>
 
 <form action='/signup' method='get'>
   <input type='submit' value='Sign up'>
 </form>
 
-<form action='/login' method='get'>
-  <input type='submit' value='Log in'>
+<form action='/login' method='post'>
+  <input type='text' name='username' value='username'>
+  <input type='text' value='password' name='password'>
+  <input type='submit' value='Login'>
 </form>
 
 <form action='/spaces' method='get'>

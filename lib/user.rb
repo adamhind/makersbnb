@@ -28,8 +28,16 @@ class User
       username: result[0]['username'],
       email: result[0]['email'],
       password: result[0]['password'])
-
   end
+
+  def self.login(username:, password:)
+    result = connection.exec_params(
+      "SELECT user_id FROM users WHERE username='#{username}' AND password='#{password}';")
+      result[0]['user_id'].to_i
+  end 
+
+
+
 
   def self.connection
     private_class_method

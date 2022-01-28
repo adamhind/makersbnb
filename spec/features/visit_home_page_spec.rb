@@ -15,10 +15,4 @@ feature 'visits the home page' do
     click_button('Sign up')
     expect(current_path).to eq '/signup'
   end
-
-  scenario 'user clicks login button on homepage' do
-    visit('/home')
-    click_button('Log in')
-    expect(current_path).to eq '/login'
-  end
 end
