@@ -71,9 +71,12 @@ class Makersbnb < Sinatra::Base
     redirect('/home')
   end 
 
-  get '/home' do 
-  
+  post '/login' do 
+    session[:user_id] = User.login(username: params[:username], password: params[:password])
+    username = params[:username]
+    redirect('/home')
   end
+
 
   run! if app_file == $0
 end
