@@ -24,7 +24,6 @@ class Booking
       date_from: result[0]['date_from'],
       date_to: result[0]['date_to'],
       booker_id: result[0]['booker_id']
-      # confirmed: result[0]['confirmed']
     )
   end
 
