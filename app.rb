@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 
 require_relative 'lib/space'
 require_relative 'lib/user'
+require_relative 'lib/booking'
 require_relative 'lib/mail'
 
 class Makersbnb < Sinatra::Base
@@ -21,7 +22,12 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all(checkin: params[:'Check-in'], checkout: params[:'Check-out'])
+    session[:check_in] = params[:'Check-in']
+    session[:check_out] = params[:'Check-out']
+    @spaces = Space.all(
+      checkin: params[:'Check-in'],
+      checkout: params[:'Check-out']
+      )
     erb :'spaces/index'
   end
 
@@ -42,6 +48,17 @@ class Makersbnb < Sinatra::Base
 
   post '/spaces/request' do 
     @name = params[:name]
+    @space_id = params[:space_id]
+    # @booker_id = session[:user_id]
+    @booker_id = '1' # Place holder
+    @date_from = session[:check_in]
+    @date_to = session[:check_out]
+    Booking.add(
+      space_id: @space_id, 
+      booker_id: @booker_id, 
+      date_from: @date_from, 
+      date_to: @date_to
+      )
     erb :'spaces/requested'
   end 
 

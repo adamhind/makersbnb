@@ -10,6 +10,7 @@
 
       <form action = '/spaces/request' method = 'POST'>
         <input type = 'hidden' name = 'name' value = '<%=space.name%>'>
+        <input type = 'hidden' name = 'space_id' value = '<%=space.id%>'>
         <input type = 'submit' value = 'Request <%=space.name%>'>
       </form>
     </li>
