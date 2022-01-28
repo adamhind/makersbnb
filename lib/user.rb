@@ -36,6 +36,24 @@ class User
       result[0]['user_id'].to_i
   end 
 
+  def requests
+    @my_bookings = []
+
+    space_id = User.connection.exec("SELECT space_id from spaces WHERE owner_id='#{@user_id}';")
+    space_id = space_id.map do |space|
+      space
+    end 
+
+    space_id.each do |spacey|
+    results = User.connection.exec("SELECT * from bookings WHERE space_id='#{spacey['space_id']}';")
+      results.map do |each_booking|
+        @my_bookings << each_booking
+      end 
+    end 
+    @my_bookings
+  end 
+  
+ 
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'

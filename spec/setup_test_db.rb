@@ -58,6 +58,6 @@ def add_bookings_to_test_database
   connection.exec("INSERT INTO bookings (space_id, date_from, date_to, booker_id, confirmed) VALUES 
   ('2', '2022-01-10', '2022-01-11', '3', 'false');")
   connection.exec("INSERT INTO bookings (space_id, date_from, date_to, booker_id, confirmed) VALUES 
-  ('1', '2022-01-01', '2022-01-02', '3', 'true');")
+  ('1', '2022-02-01', '2022-02-02', '3', 'true');")
 end
   
