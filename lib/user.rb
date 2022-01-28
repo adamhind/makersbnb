@@ -36,9 +36,6 @@ class User
       result[0]['user_id'].to_i
   end 
 
-
-
-
   def self.connection
     private_class_method
     if ENV['ENVIRONMENT'] == 'test'
