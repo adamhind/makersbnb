@@ -8,4 +8,5 @@ feature 'signing up ' do
     click_button('Sign up')
     expect(current_path).to eq('/home')
   end
+
 end

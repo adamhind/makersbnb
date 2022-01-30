@@ -66,7 +66,13 @@ class Makersbnb < Sinatra::Base
   end 
 
   post '/home' do 
-    User.add(first_name: params[:first_name], surname: params[:surname], username: params[:username], email: params[:email], password: params[:password])
+    User.add(
+      first_name: params[:first_name],
+      surname: params[:surname],
+      username: params[:username],
+      email: params[:email],
+      password: params[:password]
+      )
     redirect('/home')
   end 
 

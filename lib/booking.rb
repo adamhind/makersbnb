@@ -12,8 +12,9 @@ class Booking
   end
 
   def self.add(space_id:, date_from:, date_to:, booker_id:)
-    result  = connection.exec_params(
-      'INSERT INTO bookings (space_id, date_from, date_to, booker_id, confirmed) VALUES($1, $2, $3, $4, $5)
+    result = connection.exec_params(
+      'INSERT INTO bookings (space_id, date_from, date_to, booker_id, confirmed) 
+      VALUES($1, $2, $3, $4, $5)
       RETURNING booking_id, space_id, date_from, date_to, booker_id, confirmed;',
       [space_id, date_from, date_to, booker_id, 'false']
     )

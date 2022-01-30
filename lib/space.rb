@@ -52,8 +52,9 @@ class Space
 
   def self.add(name:, description:, price:, available_from:, available_to:)
     result = connection.exec_params(
-      'INSERT INTO spaces (space_name, description, price, available_from, available_to) VALUES($1, $2, $3, $4, $5)
-        RETURNING space_id, space_name, description, price, available_from, available_to;',
+      'INSERT INTO spaces (space_name, description, price, available_from, available_to)
+      VALUES($1, $2, $3, $4, $5)
+      RETURNING space_id, space_name, description, price, available_from, available_to;',
       [name, description, price, available_from, available_to]
     )
     Space.new(id: result[0]['space_id'], 

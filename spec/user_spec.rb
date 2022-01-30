@@ -22,5 +22,6 @@ describe User do
       user = User.login(password: 'Password3', username: 'TEST03')
       expect(user).to eq 3
     end 
-  end 
-end 
+  end
+  
+end
